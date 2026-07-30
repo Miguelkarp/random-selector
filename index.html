@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tómbola — selector aleatorio sin repetición</title>
+  <meta name="description" content="Selecciona elementos aleatorios de una lista sin repetirlos, con historial persistente." />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-theme="dark">
+  <div class="wrap">
+    <header class="header">
+      <div class="brand">
+        <span class="brand__mark">v1.0.0</span>
+        <h1>Tómbola</h1>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+        Modo claro
+      </button>
+    </header>
+
+    <section class="progress" aria-label="Progreso del sorteo">
+      <div class="progress__row">
+        <span class="progress__count">
+          <strong id="used-count">0</strong> / <span id="total-count">0</span> usados
+        </span>
+        <span id="remaining-count">0 disponibles</span>
+      </div>
+      <div class="progress__track">
+        <div id="progress-fill" class="progress__fill" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+      </div>
+    </section>
+
+    <section class="stage">
+      <div id="ticket" class="ticket ticket--empty">
+        <div>
+          <span class="ticket__label">Boleto sorteado</span>
+          <span id="ticket-value" class="ticket__value">Presiona sacar boleto</span>
+        </div>
+      </div>
+      <button id="draw-btn" class="draw-btn" type="button">Sacar boleto</button>
+    </section>
+
+    <section class="columns" aria-label="Listas de elementos">
+      <div class="column column--available">
+        <div class="column__head">
+          <span class="column__title column__title--available">Disponibles</span>
+          <span id="available-total" class="column__count">0</span>
+        </div>
+        <ul id="available-list" class="list"></ul>
+      </div>
+      <div class="column column--used">
+        <div class="column__head">
+          <span class="column__title">Usados</span>
+          <span id="used-total" class="column__count">0</span>
+        </div>
+        <ul id="used-list" class="list"></ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <button id="reset-btn" class="reset-btn" type="button">Reiniciar tómbola</button>
+    </footer>
+  </div>
+
+  <div id="confirm-backdrop" class="confirm-backdrop" hidden>
+    <div class="confirm-box" role="alertdialog" aria-modal="true" aria-labelledby="confirm-text">
+      <p id="confirm-text">¿Reiniciar la tómbola? Se perderá el historial de usados.</p>
+      <div class="confirm-actions">
+        <button id="confirm-cancel" type="button">Cancelar</button>
+        <button id="confirm-yes" class="confirm-yes" type="button">Sí, reiniciar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="live-region" class="sr-only" role="status" aria-live="polite"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/selector.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

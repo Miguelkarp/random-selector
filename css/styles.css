@@ -1,0 +1,452 @@
+/* ==========================================================================
+   TÓMBOLA — sistema de diseño
+   Metáfora: un bolo de rifa. Cada elemento es un boleto; sacarlo lo mueve
+   de "disponibles" a "usados". El boleto sorteado se muestra grande y
+   perforado, como si acabara de salir del tambor.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
+:root {
+  /* Color */
+  --ink: #1b1b1f;
+  --surface: #242229;
+  --surface-raised: #2d2b33;
+  --paper: #f2efe9;
+  --paper-dim: #d8d4c9;
+  --gold: #e8b94c;
+  --gold-dim: #a3833b;
+  --teal: #5b8c7b;
+  --text: #f2efe9;
+  --text-muted: #9c9aa5;
+  --danger: #d97757;
+
+  /* Tipografía */
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Layout */
+  --radius: 14px;
+  --notch: 16px;
+  --max-width: 880px;
+}
+
+[data-theme="light"] {
+  --ink: #eee9dd;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --paper: #1b1b1f;
+  --paper-dim: #3a3843;
+  --text: #201f24;
+  --text-muted: #6b6875;
+}
+
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+/* ---------- header ---------- */
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.brand__mark {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  letter-spacing: -0.01em;
+}
+
+.theme-toggle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border: 1px solid var(--paper-dim);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ---------- progreso: fila de boletos ---------- */
+
+.progress {
+  margin-bottom: 2.5rem;
+}
+
+.progress__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.progress__count strong {
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.progress__track {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--surface-raised);
+  overflow: hidden;
+  border: 1px solid var(--paper-dim);
+}
+
+.progress__fill {
+  height: 100%;
+  width: 0%;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--gold) 0px,
+    var(--gold) 8px,
+    var(--gold-dim) 8px,
+    var(--gold-dim) 16px
+  );
+  transition: width 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ---------- escenario de sorteo ---------- */
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 3rem 1rem;
+  margin-bottom: 2.5rem;
+  background: radial-gradient(ellipse at center, var(--surface) 0%, transparent 75%);
+}
+
+.ticket {
+  position: relative;
+  min-width: min(360px, 100%);
+  min-height: 140px;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+}
+
+.ticket::before,
+.ticket::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: var(--notch);
+  height: var(--notch);
+  background: var(--ink);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.ticket::before {
+  left: calc(var(--notch) / -2);
+}
+
+.ticket::after {
+  right: calc(var(--notch) / -2);
+}
+
+.ticket__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.ticket__value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.3rem, 4vw, 1.85rem);
+  word-break: break-word;
+}
+
+.ticket--empty .ticket__value {
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+@keyframes draw-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.ticket.is-fresh {
+  animation: draw-in 0.45s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+.draw-btn {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  background: var(--gold);
+  color: var(--ink);
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px -10px rgba(232, 185, 76, 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+}
+
+.draw-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -10px rgba(232, 185, 76, 0.65);
+}
+
+.draw-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.draw-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.draw-btn:focus-visible,
+.theme-toggle:focus-visible,
+.reset-btn:focus-visible,
+.list__item:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ---------- columnas: disponibles / usados ---------- */
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--paper-dim);
+}
+
+.column {
+  background: var(--surface);
+  padding: 1.25rem;
+  min-height: 220px;
+}
+
+.column + .column {
+  border-left: 2px dashed var(--paper-dim);
+}
+
+.column__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.column__title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.column__title--available {
+  color: var(--gold);
+}
+
+.column__count {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.list__item {
+  font-size: 0.88rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  background: var(--surface-raised);
+}
+
+.column--used .list__item {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--teal);
+  text-decoration-thickness: 1.5px;
+}
+
+.list__empty {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---------- pie: reinicio ---------- */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.reset-btn {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  border-radius: 999px;
+  padding: 0.55rem 1.3rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.reset-btn:hover {
+  background: var(--danger);
+  color: var(--ink);
+}
+
+/* ---------- diálogo de confirmación ---------- */
+
+.confirm-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 10;
+}
+
+.confirm-backdrop[hidden] {
+  display: none;
+}
+
+.confirm-box {
+  background: var(--surface);
+  border: 1px solid var(--paper-dim);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  max-width: 340px;
+  text-align: center;
+}
+
+.confirm-box p {
+  margin-bottom: 1.1rem;
+  font-size: 0.95rem;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.confirm-actions button {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--paper-dim);
+}
+
+.confirm-actions .confirm-yes {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: var(--ink);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 620px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .column + .column {
+    border-left: none;
+    border-top: 2px dashed var(--paper-dim);
+  }
+
+  .header {
+    flex-direction: column;
+  }
+}
+
+/* ---------- accesibilidad: utilidad para lectores de pantalla ---------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

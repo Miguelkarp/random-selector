@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tómbola — selector aleatorio sin repetición</title>
-  <meta name="description" content="Selecciona elementos aleatorios de una lista sin repetirlos, con historial persistente." />
+  <title>Temario — Métodos matemáticos para la física</title>
+  <meta name="description" content="Selecciona elementos aleatorios de una lista sin repetirlos, con historial persistente para auxiliar en el estudio de temarios largos." />
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -20,12 +20,12 @@
       </button>
     </header>
 
-    <section class="progress" aria-label="Progreso del sorteo">
+    <section class="progress" aria-label="Avance">
       <div class="progress__row">
         <span class="progress__count">
-          <strong id="used-count">0</strong> / <span id="total-count">0</span> usados
+          <strong id="used-count">0</strong> / <span id="total-count">0</span> Leídos
         </span>
-        <span id="remaining-count">0 disponibles</span>
+        <span id="remaining-count">0 Disponibles</span>
       </div>
       <div class="progress__track">
         <div id="progress-fill" class="progress__fill" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
@@ -35,24 +35,24 @@
     <section class="stage">
       <div id="ticket" class="ticket ticket--empty">
         <div>
-          <span class="ticket__label">Boleto sorteado</span>
-          <span id="ticket-value" class="ticket__value">Presiona sacar boleto</span>
+          <span class="ticket__label">Tema sorteado</span>
+          <span id="ticket-value" class="ticket__value">Presiona para sacar un tema</span>
         </div>
       </div>
-      <button id="draw-btn" class="draw-btn" type="button">Sacar boleto</button>
+      <button id="draw-btn" class="draw-btn" type="button">Tema</button>
     </section>
 
     <section class="columns" aria-label="Listas de elementos">
       <div class="column column--available">
         <div class="column__head">
-          <span class="column__title column__title--available">Disponibles</span>
+          <span class="column__title column__title--available">Faltantes</span>
           <span id="available-total" class="column__count">0</span>
         </div>
         <ul id="available-list" class="list"></ul>
       </div>
       <div class="column column--used">
         <div class="column__head">
-          <span class="column__title">Usados</span>
+          <span class="column__title">Completados</span>
           <span id="used-total" class="column__count">0</span>
         </div>
         <ul id="used-list" class="list"></ul>
@@ -60,13 +60,13 @@
     </section>
 
     <footer class="footer">
-      <button id="reset-btn" class="reset-btn" type="button">Reiniciar tómbola</button>
+      <button id="reset-btn" class="reset-btn" type="button">Reiniciar temario</button>
     </footer>
   </div>
 
   <div id="confirm-backdrop" class="confirm-backdrop" hidden>
     <div class="confirm-box" role="alertdialog" aria-modal="true" aria-labelledby="confirm-text">
-      <p id="confirm-text">¿Reiniciar la tómbola? Se perderá el historial de usados.</p>
+      <p id="confirm-text">¿Reiniciar el listado? Se perderá el historial repasado.</p>
       <div class="confirm-actions">
         <button id="confirm-cancel" type="button">Cancelar</button>
         <button id="confirm-yes" class="confirm-yes" type="button">Sí, reiniciar</button>

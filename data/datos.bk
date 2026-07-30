@@ -1,0 +1,499 @@
+===========================
+ÁLGEBRA LINEAL
+===========================
+
+001. Definición de espacio vectorial
+002. Subespacios vectoriales
+003. Combinaciones lineales
+004. Independencia lineal
+005. Dependencia lineal
+006. Conjunto generador (span)
+007. Base de un espacio vectorial
+008. Dimensión de un espacio vectorial
+009. Cambio de base
+010. Coordenadas respecto a una base
+011. Espacios cociente
+012. Isomorfismos entre espacios vectoriales
+013. Producto interno
+014. Norma inducida
+015. Distancia en espacios vectoriales
+016. Ortogonalidad
+017. Complemento ortogonal
+018. Proyección ortogonal
+019. Desigualdad de Cauchy-Schwarz
+020. Desigualdad triangular
+021. Proceso de Gram-Schmidt
+022. Matrices y transformaciones lineales
+023. Álgebra de matrices
+024. Traza de una matriz
+025. Determinante
+026. Rango de una matriz
+027. Núcleo de una transformación lineal
+028. Imagen de una transformación lineal
+029. Teorema rango-nulidad
+030. Inversa de una matriz
+031. Eliminación de Gauss
+032. Forma escalonada reducida
+033. Sistemas lineales
+034. Regla de Cramer
+035. Polinomio característico
+036. Autovalores
+037. Autovectores
+038. Multiplicidad algebraica
+039. Multiplicidad geométrica
+040. Diagonalización
+041. Forma canónica de Jordan
+042. Matrices diagonales
+043. Matrices triangulares
+044. Matrices simétricas
+045. Matrices antisimétricas
+046. Matrices ortogonales
+047. Matrices unitarias
+048. Matrices hermíticas
+049. Matrices antihermíticas
+050. Matrices normales
+051. Operadores autoadjuntos
+052. Operadores unitarios
+053. Operadores de proyección
+054. Operadores de reflexión
+055. Operadores de rotación
+056. Teorema espectral
+057. Valores singulares
+058. Descomposición en valores singulares (SVD)
+059. Factorización LU
+060. Factorización QR
+061. Factorización de Cholesky
+062. Exponencial de una matriz
+063. Logaritmo de una matriz
+064. Funciones analíticas de matrices
+065. Producto tensorial de matrices
+
+===========================
+CÁLCULO MULTIVARIABLE
+===========================
+
+066. Funciones de varias variables
+067. Límites en varias variables
+068. Continuidad
+069. Derivadas parciales
+070. Derivadas direccionales
+071. Gradiente
+072. Plano tangente
+073. Diferencial total
+074. Regla de la cadena
+075. Jacobiano
+076. Hessiano
+077. Expansión de Taylor multivariable
+078. Máximos y mínimos locales
+079. Criterio del Hessiano
+080. Multiplicadores de Lagrange
+081. Integrales dobles
+082. Integrales triples
+083. Cambio de variables
+084. Coordenadas polares
+085. Coordenadas cilíndricas
+086. Coordenadas esféricas
+
+===========================
+CÁLCULO VECTORIAL
+===========================
+
+087. Campos escalares
+088. Campos vectoriales
+089. Operador nabla
+090. Gradiente de un campo escalar
+091. Divergencia
+092. Rotacional
+093. Laplaciano
+094. Laplaciano vectorial
+095. Derivada material
+096. Integral de línea
+097. Integral de superficie
+098. Integral de volumen
+099. Campos conservativos
+100. Función potencial
+
+INVENTARIO DE HERRAMIENTAS MATEMÁTICAS PARA FÍSICA
+Preparación para examen de Maestría en Física (UNAM)
+
+PARTE II (101–200)
+
+===========================
+CÁLCULO VECTORIAL
+===========================
+
+101. Campos irrotacionales
+102. Campos solenoidales
+103. Potencial vector
+104. Descomposición de Helmholtz
+105. Identidades vectoriales de Gibbs
+106. Producto escalar
+107. Producto vectorial
+108. Producto triple escalar
+109. Producto triple vectorial
+110. Derivada de un campo vectorial
+111. Divergencia de un rotacional
+112. Rotacional de un gradiente
+113. Laplaciano de un producto
+114. Teorema fundamental de las integrales de línea
+115. Teorema de Green
+116. Teorema de Gauss (Divergencia)
+117. Teorema de Stokes
+118. Coordenadas ortogonales generales
+119. Factores de escala (coeficientes de Lamé)
+120. Jacobiano en coordenadas curvilíneas
+121. Bases covariantes
+122. Bases contravariantes
+123. Operadores diferenciales en coordenadas curvilíneas
+124. Gradiente en coordenadas cilíndricas
+125. Divergencia en coordenadas cilíndricas
+126. Rotacional en coordenadas cilíndricas
+127. Laplaciano en coordenadas cilíndricas
+128. Gradiente en coordenadas esféricas
+129. Divergencia en coordenadas esféricas
+130. Rotacional en coordenadas esféricas
+131. Laplaciano en coordenadas esféricas
+132. Funciones armónicas
+133. Ecuación de Laplace
+134. Ecuación de Poisson
+135. Principio del máximo
+136. Problema de Dirichlet
+137. Problema de Neumann
+138. Condiciones de frontera mixtas
+139. Operador nabla cuadrado
+140. Operador d'Alembertiano
+
+===========================
+VARIABLE COMPLEJA
+===========================
+
+141. Forma polar de un número complejo
+142. Argumento de un número complejo
+143. Raíces n-ésimas de la unidad
+144. Exponencial compleja
+145. Fórmula de Euler
+146. Logaritmo complejo
+147. Potencias complejas
+148. Funciones multivaluadas
+149. Cortes de rama (Branch Cuts)
+150. Funciones analíticas
+151. Funciones holomorfas
+152. Funciones enteras
+153. Funciones meromorfas
+154. Ecuaciones de Cauchy-Riemann
+155. Interpretación geométrica de Cauchy-Riemann
+156. Derivada compleja
+157. Funciones armónicas
+158. Función conjugada armónica
+159. Integrales de contorno
+160. Independencia de la trayectoria
+161. Teorema integral de Cauchy
+162. Fórmula integral de Cauchy
+163. Desigualdad de Cauchy
+164. Teorema de Liouville
+165. Teorema fundamental del álgebra
+166. Series de Taylor
+167. Radio de convergencia
+168. Series de Laurent
+169. Singularidades removibles
+170. Polos simples
+171. Polos múltiples
+172. Singularidades esenciales
+173. Residuo de una función
+174. Cálculo de residuos
+175. Teorema del residuo
+176. Integrales reales mediante residuos
+177. Lema de Jordan
+178. Valor principal de Cauchy
+179. Transformaciones conformes
+180. Aplicaciones de las transformaciones conformes
+
+===========================
+ECUACIONES DIFERENCIALES ORDINARIAS
+===========================
+
+181. Clasificación de EDO
+182. Problema de valor inicial
+183. Problema de condiciones de frontera
+184. Existencia y unicidad de soluciones
+185. Ecuaciones separables
+186. Ecuaciones homogéneas
+187. Ecuaciones exactas
+188. Factor integrante
+189. Ecuación de Bernoulli
+190. Ecuación de Riccati
+191. Ecuación de Clairaut
+192. Ecuación de Lagrange
+193. Ecuaciones lineales de primer orden
+194. Ecuaciones lineales de segundo orden
+195. Soluciones fundamentales
+196. Ecuación característica
+197. Raíces reales
+198. Raíces complejas
+199. Raíces múltiples
+200. Principio de superposición
+
+INVENTARIO DE HERRAMIENTAS MATEMÁTICAS PARA FÍSICA
+Preparación para examen de Maestría en Física (UNAM)
+
+PARTE III (201–300)
+
+===========================
+ECUACIONES DIFERENCIALES ORDINARIAS
+===========================
+
+201. Método de coeficientes indeterminados
+202. Variación de parámetros
+203. Reducción de orden
+204. Ecuaciones de Euler-Cauchy
+205. Soluciones en series de potencias
+206. Método de Frobenius
+207. Punto ordinario
+208. Punto singular regular
+209. Punto singular irregular
+210. Ecuación indicial
+211. Relaciones de recurrencia
+212. Solución dominante
+213. Solución recesiva
+214. Sistemas de ecuaciones diferenciales lineales
+215. Representación matricial de sistemas
+216. Exponencial de matrices
+217. Estabilidad lineal
+218. Puntos de equilibrio
+219. Clasificación de puntos críticos
+220. Retrato fase
+221. Bifurcaciones elementales
+222. Oscilador armónico
+223. Oscilador amortiguado
+224. Oscilador forzado
+225. Resonancia
+226. Problemas de Sturm-Liouville
+227. Operadores autoadjuntos
+228. Ortogonalidad de autofunciones
+229. Valores propios
+230. Expansión en autofunciones
+
+===========================
+ECUACIONES DIFERENCIALES PARCIALES
+===========================
+
+231. Clasificación de EDP
+232. Ecuaciones elípticas
+233. Ecuaciones parabólicas
+234. Ecuaciones hiperbólicas
+235. Método de separación de variables
+236. Problemas de frontera
+237. Problemas de valor inicial
+238. Método de características
+239. Ecuación de difusión
+240. Ecuación del calor
+241. Ecuación de onda
+242. Ecuación de Helmholtz
+243. Ecuación de Schrödinger
+244. Ecuación de Klein-Gordon
+245. Función de Green para EDO
+246. Función de Green para EDP
+247. Construcción de funciones de Green
+248. Soluciones fundamentales
+249. Operadores diferenciales lineales
+250. Operadores elípticos
+
+===========================
+SERIES Y TRANSFORMADAS
+===========================
+
+251. Series infinitas
+252. Convergencia absoluta
+253. Convergencia uniforme
+254. Criterio de razón
+255. Criterio de raíz
+256. Series alternantes
+257. Series de potencias
+258. Radio de convergencia
+259. Series de Fourier
+260. Serie seno
+261. Serie coseno
+262. Serie compleja de Fourier
+263. Ortogonalidad trigonométrica
+264. Coeficientes de Fourier
+265. Convergencia puntual
+266. Fenómeno de Gibbs
+267. Identidad de Parseval
+268. Teorema de Plancherel
+269. Transformada de Fourier
+270. Transformada inversa de Fourier
+271. Transformada discreta de Fourier
+272. Transformada rápida de Fourier (FFT)
+273. Propiedad de convolución
+274. Teorema de convolución
+275. Transformada de Laplace
+276. Transformada inversa de Laplace
+277. Propiedades operacionales de Laplace
+278. Método de Laplace para EDO
+279. Función delta de Dirac
+280. Función escalón de Heaviside
+
+===========================
+FUNCIONES ESPECIALES
+===========================
+
+281. Función Gamma
+282. Propiedades de la función Gamma
+283. Función Beta
+284. Relación Gamma-Beta
+285. Función error
+286. Funciones de Bessel de primera especie
+287. Funciones de Bessel de segunda especie
+288. Funciones de Hankel
+289. Funciones de Bessel modificadas
+290. Polinomios de Legendre
+291. Funciones asociadas de Legendre
+292. Polinomios de Hermite
+293. Polinomios de Laguerre
+294. Polinomios de Laguerre asociados
+295. Polinomios de Chebyshev
+296. Polinomios de Gegenbauer
+297. Armónicos esféricos
+298. Relaciones de recurrencia
+299. Funciones generadoras
+300. Relaciones de ortogonalidad
+
+INVENTARIO DE HERRAMIENTAS MATEMÁTICAS PARA FÍSICA
+Preparación para examen de Maestría en Física (UNAM)
+
+PARTE IV (301–400)
+
+===========================
+DISTRIBUCIONES Y FUNCIONES DE GREEN
+===========================
+
+301. Distribuciones de Schwartz
+302. Funcionales lineales
+303. Espacio de funciones de prueba
+304. Delta de Dirac
+305. Delta multidimensional
+306. Derivada de la delta de Dirac
+307. Función escalón de Heaviside
+308. Distribuciones singulares
+309. Derivadas débiles
+310. Soluciones débiles
+311. Funciones fundamentales
+312. Funciones de Green
+313. Método de imágenes
+314. Funciones de Green retardadas
+315. Funciones de Green avanzadas
+316. Funciones de Green de Feynman
+317. Ecuaciones integrales de Fredholm
+318. Ecuaciones integrales de Volterra
+319. Operadores integrales
+320. Núcleos integrales
+
+===========================
+CÁLCULO DE VARIACIONES
+===========================
+
+321. Funcionales
+322. Variaciones
+323. Primera variación
+324. Segunda variación
+325. Ecuación de Euler-Lagrange
+326. Funcionales con varias variables
+327. Restricciones variacionales
+328. Multiplicadores de Lagrange
+329. Principio de Hamilton
+330. Principio de mínima acción
+331. Coordenadas generalizadas
+332. Momento conjugado
+333. Transformación de Legendre
+334. Funcional de energía
+335. Principios variacionales en física
+
+===========================
+TENSORES Y GEOMETRÍA DIFERENCIAL
+===========================
+
+336. Notación indicial
+337. Convención de suma de Einstein
+338. Índices covariantes
+339. Índices contravariantes
+340. Delta de Kronecker
+341. Símbolo de Levi-Civita
+342. Producto tensorial
+343. Contracción de tensores
+344. Tensor métrico
+345. Cambio de coordenadas
+346. Bases covariantes
+347. Bases contravariantes
+348. Derivada covariante
+349. Símbolos de Christoffel
+350. Transporte paralelo
+351. Geodésicas
+352. Tensor de Riemann
+353. Tensor de Ricci
+354. Escalar de curvatura
+355. Identidades de Bianchi
+
+===========================
+ANÁLISIS FUNCIONAL
+===========================
+
+356. Espacios métricos
+357. Espacios normados
+358. Espacios de Banach
+359. Espacios de Hilbert
+360. Espacios Lp
+361. Espacios de Sobolev
+362. Operadores lineales acotados
+363. Operadores compactos
+364. Operadores autoadjuntos
+365. Operadores no acotados
+366. Espectro de un operador
+367. Resolvente
+368. Teorema espectral
+369. Bases ortonormales
+370. Descomposición espectral
+
+===========================
+MÉTODOS ASINTÓTICOS
+===========================
+
+371. Expansiones asintóticas
+372. Perturbaciones regulares
+373. Perturbaciones singulares
+374. Método WKB
+375. Método de múltiples escalas
+376. Método del punto silla
+377. Método de Laplace
+378. Método de fase estacionaria
+379. Matching asintótico
+380. Capas límite
+
+===========================
+MÉTODOS NUMÉRICOS
+===========================
+
+381. Método de Newton-Raphson
+382. Método de la secante
+383. Método de bisección
+384. Eliminación de Gauss
+385. Factorización LU
+386. Método de Jacobi
+387. Método de Gauss-Seidel
+388. Gradiente conjugado
+389. Método de Euler
+390. Método de Runge-Kutta
+391. Diferencias finitas
+392. Elementos finitos
+393. Volúmenes finitos
+394. Interpolación de Lagrange
+395. Splines cúbicos
+
+===========================
+PROBABILIDAD Y PROCESOS ESTOCÁSTICOS
+===========================
+
+396. Variables aleatorias
+397. Distribución normal
+398. Distribución de Poisson
+399. Cadenas de Markov
+400. Movimiento browniano
